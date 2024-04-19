@@ -1,0 +1,59 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "autoAudits": false,
+    "nodeModules": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "appid": "wx64f7197e54ba3df9",
+  "projectname": "dididada",
+  "libVersion": "3.4.2",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "全部内容",
+          "pathName": "pages/list/list",
+          "query": ""
+        },
+        {
+          "name": "商铺详情",
+          "pathName": "pages/info/info",
+          "query": "id=XE0cj8DR1TiNzjpY",
+          "scene": null
+        },
+        {
+          "name": "新增数据",
+          "pathName": "pages/add/add",
+          "query": ""
+        },
+        {
+          "name": "搜索页面",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "compileType": "miniprogram",
+  "srcMiniprogramRoot": "miniprogram/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}
