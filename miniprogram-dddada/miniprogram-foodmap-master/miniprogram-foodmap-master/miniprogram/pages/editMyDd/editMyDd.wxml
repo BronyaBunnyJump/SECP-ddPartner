@@ -1,0 +1,71 @@
+<view class="container">
+  <!-- 背景 -->
+  <view class="background"></view>
+
+  <view class="form-item">
+    <text>群聊名称：</text>
+    <input type="text" placeholder="为dd群聊起个名字吧" value="{{groupName}}" bindinput="onInputTitle" />
+  </view>
+
+  <view class="form-item">
+    <text>dd内容：</text>
+    <input type="text" placeholder="请输入dd内容" value="{{content}}"bindinput="onInputContent" />
+  </view>
+
+  <view class="form-item">
+    <text>活动时间：</text>
+    <input type="text" placeholder="请描述dd活动时间" value="{{date}}"bindinput="onInputDate" />
+  </view>
+
+  <view class="form-item">
+    <text>活动截止时间（固定）：</text>
+    <label type="text">{{deadLine}}</label>
+  </view>
+
+  <view class="form-item">
+    <text>性别限制：</text>
+    <picker mode="selector" bindchange="onSelectGender" range="{{genderOptions}}">
+      <view class="picker">
+        {{gender}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="form-item">
+    <text>地点：</text>
+    <input type="text" placeholder="请输入地点" value="{{location}}" bindinput="onInputLocation" />
+  </view>
+
+  <view class="form-item">
+    <text>地图位置：</text>
+    <button class="choosePosition-btn" bindtap="chooseLocation">选择地图位置</button>
+  </view>
+
+  <view class="form-item">
+    <text>标签：</text>
+    <input type="text" placeholder="请选择标签" value="{{ddType}}" bindinput="onInputTag" />
+    <button class='addTag-btn' bindtap="addTag">添加</button>
+    <button class='clearTag-btn' bindtap="clearTags">清空</button>
+  </view>
+
+  <view class="tags">
+  
+    <block wx:for="{{tags}}" wx:key="index">
+      <view class="tag-container">
+      <text class="tag">{{item}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="form-item">
+    <text>群聊头像:</text>
+    <button class="choosePicture-btn" bindtap="chooseImage">选择图片</button>
+    <image class="avatar" src="{{imageSrc}}"></image>
+  </view>
+
+  <view class="button-container">
+  <button class="reset-btn" bindtap="resetDd">重置公告</button>
+  <button class="submit-btn" bindtap="submitEditedDd">修改公告</button>
+  </view>
+
+</view>

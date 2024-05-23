@@ -1,0 +1,17 @@
+<!-- 背景 -->
+<view class="background"></view>
+<view class="dynamic-container">
+  <!-- 使用wx:for循环遍历activities数组 -->
+  <block wx:for="{{activities}}" wx:key="id">
+    <view class="dynamic-box" data-info="{{item}}">
+        <view class="dynamic-text">
+          <view class="dynamic-header">{{item.title}}</view>
+          <view class="dynamic-content">{{item.description}}</view>
+        </view>
+        <view class="dynamic-buttons">
+            <button class="edit-button" bindtap="editMyDd" data-info="{{item}}">编辑</button>
+            <button class="delete-button" bindtap="deleteMyDd" data-info="{{item}}">删除</button>
+        </view>
+    </view>
+  </block>
+</view>

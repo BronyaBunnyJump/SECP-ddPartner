@@ -1,0 +1,56 @@
+<!-- 背景 -->
+<view class="background"></view>
+<!-- 基本信息框 -->
+<view class="basic-info">
+    <view class="info-row">
+        <text class="label">性别：</text>
+        <picker mode="selector" range="{{genderOptions}}" bindchange="genderChange">
+            <view class="picker">
+                {{gender}}
+            </view>
+        </picker>
+    </view>
+    <view class="info-row">
+    <text class="label">年龄：</text>
+    <input class="input" type="digit" value="{{age}}" bindinput="checkAgeInput" />
+</view>
+</view>
+
+<!-- 详细信息框 -->
+<view class="detailed-info">
+  <view class="info-row">
+    <text class="label">专业：</text>
+    <input class="input" type="text" value="{{major}}" maxlength="15" bindinput="majorInput" />
+  </view>
+  <view class="info-row">
+    <text class="label">地区：</text>
+    <input class="input" type="text" value="{{region}}" maxlength="20" bindinput="regionInput" />
+  </view>
+  <view class="info-row">
+    <text class="label">星座：</text>
+    <picker mode="selector" range="{{constellationOptions}}" bindchange="constellationChange">
+        <view class="picker">
+            {{constellation}}
+        </view>
+    </picker>
+  </view>
+</view>
+
+<!-- 个性签名框 -->
+<view class="signature">
+    <text class="label">个性签名：</text>
+    <textarea value="{{signature}}" bindinput="signatureInput" maxlength="100" rows="4"></textarea>
+</view>
+
+
+<!-- 按钮 -->
+<view class="buttons">
+    <button class="reset-button" bindtap="handleResetButtonClick">重置</button>
+    <button class="submit-button" bindtap="handleSubmitButtonClick" >提交</button>
+</view>
+
+<!-- 隐藏的提示框 -->
+<view class="toast" wx:if="{{showToast}}">
+  <image class="toast-image" src="/images/刷新.png"></image>
+  <text class="toast-text">已重置</text>
+</view>

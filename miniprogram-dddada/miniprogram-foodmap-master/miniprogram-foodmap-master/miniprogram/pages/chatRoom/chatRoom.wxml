@@ -1,0 +1,26 @@
+<view class="page">
+  <scroll-view class="chat-room" scroll-y="true" scroll-into-view="{{scrollLast}}">
+    <view class="label-form" wx:if="{{isLabelShow}}">
+    <text>这个群还没有消息哦，快来和小伙伴们打个招呼吧！</text>
+    </view>
+    <view wx:for="{{messages}}" wx:key="index" id="item{{index}}">
+      <view class="message {{item.isSelf ? 'self' : 'other'}}">
+        <view class="timestamp">{{item.timestamp}}</view>
+          <view class="meta" data-info="{{item}}">
+           <image class="avatar" src="{{item.avatar}}" data-info="{{item}}" bindtap="goToMemberInfo"/>
+           <view class="nicknameAndcontent-container">
+            <view class="nickname">{{item.nickname}}</view>
+            <view class="message-content">
+             <view class="content">{{item.content}}</view>
+            </view>
+           </view>
+          </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 输入区域 -->
+  <view class="input-container">
+    <input class="input" type="text" maxlength="1000" placeholder="请输入消息" value="{{inputMessage}}" bindinput="onInput" />
+    <button class="send-button" bindtap="onSend">发送</button>
+  </view>
+</view>

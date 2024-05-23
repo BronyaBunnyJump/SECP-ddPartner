@@ -1,0 +1,56 @@
+<view class="container">
+  <!-- 背景 -->
+  <view class="background"></view>
+  
+  <!-- 顶部 -->
+  <view class="top">
+    <view class="avatar-container">
+      <image class="avatar" src="{{avatarSrc}}"></image>
+      <image class="change-avatar" bindtap="editAvatar" src="/images/切换头像.png"></image>
+    </view>
+    <text class="nickname" catchtap="editNickname" wx:if="{{!isEditingNickname}}">{{nickName}}</text>
+  <input class="nickname-input" value="{{nickName}}" wx:if="{{isEditingNickname}}" bindinput="inputNickname" bindblur="exitEditting"/>
+  </view>
+
+  <!-- 保存按钮 -->
+  <button class="save-button" bindtap="saveNickname">保存</button>
+
+   <!-- 折叠面板 -->
+   <view class="accordion-container">
+    <view class="accordion">
+      <text class="label">我的偏好</text>
+      <view class="spacer"></view>
+      <image src="/images/arrow_down.png" class="arrow"  catchtap="toggleAccordion"></image>
+      <view class="edit-button-container">
+        <button class="edit-button" bindtap="toggleEditing" wx:if="{{isAccordionOpen}}">
+          {{isEditing ? '完成' : '编辑'}}
+        </button>
+      </view>
+    </view>
+  <view class="panel" wx:if="{{isAccordionOpen}}">
+    <view class="tags">
+      <block wx:for="{{tags}}" wx:key="index">
+        <view class="tag-container">
+          <text class="tag">{{item}}</text>
+        <block wx:if="{{isEditing}}">
+          <text class="delete" bindtap="removeTag" data-index="{{index}}">✕</text>
+        </block>
+        </view>
+      </block>
+      <block wx:if="{{isEditing}}">
+        <text class="addtag" bindtap="addTag">+</text>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 填充区域 -->
+<view class="filler"></view>
+
+ <!-- 按钮行 -->
+ <view class="bottom-buttons">
+    <button class="button" bindtap="goToUserDd">管理dd</button>
+    <button class="button" bindtap="goToUserData">查看&编辑资料</button>
+    <button class="button" bindtap="goToSetting">设置</button>
+  </view>
+</view>

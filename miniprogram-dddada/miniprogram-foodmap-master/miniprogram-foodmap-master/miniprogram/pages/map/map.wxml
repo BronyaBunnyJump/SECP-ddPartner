@@ -1,0 +1,7 @@
+<view>
+  <map id="map" longitude='{{longitude}}' latitude='{{latitude}}'
+    style='height:{{windowHeight}}px' markers="{{markers}}" subkey="{{mapSubKey}}" show-compass="{{true}}" scale="16" 
+    show-location="{{true}}" bindtap="createMarker">
+  </map>
+  <button bindtap="confirmLocation">确定</button>
+</view>

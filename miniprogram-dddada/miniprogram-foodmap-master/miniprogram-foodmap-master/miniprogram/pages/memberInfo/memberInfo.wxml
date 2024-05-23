@@ -1,0 +1,15 @@
+<view class="container">
+  <!-- 背景 -->
+  <view class="background"></view>
+
+  <image class="avatar" src="{{avatar}}" mode="aspectFill"></image>
+  <view class="info">
+    <view class="nickname">{{nickname}}</view>
+    <view class="item">年龄：{{age}}</view>
+    <view class="item">性别：{{gender}}</view>
+    <view class="item">住地：{{region}}</view>
+    <view class="item">星座：{{starSign}}</view>
+    <view class="item">专业：{{subject}}</view>
+    <view class="item">个性签名：{{signature}}</view>
+  </view>
+</view>

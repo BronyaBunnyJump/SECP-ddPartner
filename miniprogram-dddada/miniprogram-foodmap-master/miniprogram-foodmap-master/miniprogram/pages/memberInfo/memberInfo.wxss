@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #68c8e7, #ffffff);
+  position: absolute;
+  z-index: -1;
+}
+
+.avatar {
+  margin-top: 30px;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+
+.info {
+  display: flex; /* 使用 flexbox 布局 */
+  flex-direction: column;
+  align-items: center; /* 垂直居中 */
+  max-width: 80%;
+}
+
+.nickname {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.item {
+  font-size: 16px;
+  margin-bottom: 5rpx;
+  max-width: 100%;
+}

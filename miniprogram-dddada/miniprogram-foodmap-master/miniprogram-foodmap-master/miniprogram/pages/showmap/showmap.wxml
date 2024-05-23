@@ -1,0 +1,11 @@
+<view class="container">
+  <map id="map" longitude='{{longitude}}' latitude='{{latitude}}'
+    style='height:{{windowHeight}}px' markers="{{markers}}" subkey="{{mapSubKey}}" show-compass="{{true}}" scale="16" 
+    show-location="{{true}}">
+  </map>
+  <view class="bottom-buttons">
+  <button class="button" bindtap="getDdPosition">目标位置</button>
+  <button class="button" bindtap="confirmLocation">确定</button>
+  <button class="button" bindtap="getCenterLocation">我的位置</button>
+  </view>
+</view>

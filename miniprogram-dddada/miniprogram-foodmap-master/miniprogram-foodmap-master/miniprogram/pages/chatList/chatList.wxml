@@ -1,0 +1,19 @@
+<view class="group-chat-list">
+  <!-- 背景 -->
+  <view class="background"></view>
+
+  <block wx:for="{{groupChats}}" wx:key="id">
+    <view class="group-chat-item" bindtap="goToChatRoom" data-groupid="{{item.id}}">
+      <image class="group-chat-avatar" src="{{item.avatarUrl}}" />
+      <view class="group-chat-info">
+        <view class="group-chat-name">{{item.name}}</view>
+        <!-- 使用 <view> 包裹 content 和 timestamp，并设置垂直排列 -->
+        <view class="group-chat-message-wrapper">
+          <text class="group-chat-message">{{item.lastMessage.content}}</text>
+          <text class="group-chat-timestamp">({{item.lastMessage.timestamp}})</text>
+        </view>
+        <view class="divider"></view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,58 @@
+.group-chat-list {
+  padding: 20px;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #68c8e7, #ffffff, #68c8e7); /* 青-白-青渐变 */
+  position: fixed; /* 固定定位 */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.group-chat-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  cursor: pointer;
+}
+
+.group-chat-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.group-chat-info {
+  flex: 1;
+}
+
+.group-chat-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.group-chat-message {
+  font-size: 14px;
+  color: #333;
+}
+
+.group-chat-message-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-chat-timestamp {
+  font-size: 13px; /* 调整时间戳字体大小 */
+  color: #333; /* 设置时间戳颜色 */
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #999; /* 设置为灰色 */
+}

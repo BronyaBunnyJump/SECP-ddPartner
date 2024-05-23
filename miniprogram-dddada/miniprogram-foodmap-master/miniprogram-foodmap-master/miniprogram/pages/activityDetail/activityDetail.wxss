@@ -1,0 +1,75 @@
+/* pages/activityDetail/activityDetail.wxss */
+.container {
+  padding: 20px;
+  position: relative;
+  height: 90vh; 
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #68c8e7, #ffffff, #68c8e7); /* 青-白-青渐变 */
+  position: fixed; /* 固定定位 */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color:#ffffff;
+  white-space: normal;
+  margin-bottom: 20rpx;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20rpx;
+}
+
+.tag-container {
+  display: flex;
+  align-items: center; /* 让子元素垂直居中 */
+  padding:4px 10px;
+  background-color: #3c8cff;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.tag {
+   font-size: 16px;
+}
+
+.date {
+  margin-top: 10px;
+  color: #3c8cff;
+}
+
+.description {
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #3c8cff;
+}
+
+.bottom-buttons {
+  position: absolute; /* 设置绝对定位 */
+  bottom: 20px; /* 距离父容器底部的距离 */
+  left: 50%; /* 水平居中 */
+  width: 100%;
+  transform: translateX(-50%); /* 水平居中 */
+  display: flex;
+  flex-direction: row;
+}
+
+.join-button ,.location-button {
+  padding:0px 10px;
+  background-color: #ffff;
+  color: #3c8cffff;
+  border: 2px solid #3c8cff;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;/* 垂直居中 */ 
+}

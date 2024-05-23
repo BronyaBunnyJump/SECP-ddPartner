@@ -1,0 +1,35 @@
+<!-- pages/shouye/shouye.wxml -->
+
+<view class="container">
+
+  <!-- 背景 -->
+ <view class="background"></view> 
+
+  <!-- 搜索框 -->
+  <input class="search-input" bindinput="onInput" placeholder="输入关键字搜索活动" />
+  <view class="title-container">
+  <text class="listTitle" bindtap="filter">活动列表</text>
+  </view>
+  <!-- 活动列表 -->
+  <view class="activity-list">
+    <!-- 使用wx:for循环遍历filteredActivities数组 -->
+    <block wx:for="{{filteredActivities}}" wx:key="id">
+      <!-- 每个活动卡片 -->
+      <view class="activity-card" data-info="{{item}}" bindtap="viewActivityDetail">
+        <view class="title">{{item.title}}</view>
+        <view class="tags">
+          <!-- 循环显示活动标签 -->
+          <block wx:for="{{item.tags}}" wx:key="index">
+            <view class="tag-container"> 
+            <text class="tag">{{item}}</text>
+            </view>
+          </block>
+        </view>
+        <view class="date">时间：{{item.date}}</view>
+        <view class="description">性别限制：{{item.genderOptions}}</view>
+        <view class="description">群聊名称：{{item.groupName}}</view>
+        <view class="description">具体位置：{{item.position}}</view>       
+      </view>
+    </block>
+  </view>
+</view>

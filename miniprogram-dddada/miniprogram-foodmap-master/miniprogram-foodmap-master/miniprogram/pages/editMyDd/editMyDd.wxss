@@ -1,0 +1,138 @@
+.container {
+  font-family: 'Arial', sans-serif; /* 设置字体 */
+  display: flex; /* 使用flex布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #68c8e7, #ffffff, #68c8e7); /* 青-白-青渐变 */
+  position: fixed; /* 固定定位 */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.form-item {
+  padding: 20px;
+  margin-bottom: 15px; /* 增加间距 */
+  display: flex; /* 使用flex布局 */
+  align-items: center; /* 垂直居中 */
+}
+
+.form-item text {
+  margin-right: 10px; /* 添加水平间距 */
+}
+
+.form-item input {
+  flex: 1; /* 输入框占据剩余空间 */
+  padding: 2px;
+  border: 1px solid #ddd; /* 添加边框 */
+  border-radius: 5px; /* 添加圆角 */
+  background-color: #fff; /* 输入框背景色 */
+  text-align: right;/*文字靠右比较整齐*/
+}
+
+.form-item picker {
+  padding: 2px 4px;
+  position: absolute; /* 绝对定位 */
+  right: 20px; /* 靠屏幕右侧 */
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #fff; /* 白色背景 */
+  float: right;
+}
+
+.form-item label {
+  flex: 1; /* 输入框占据剩余空间 */
+  padding: 2px;
+  text-align: right;/*文字靠右比较整齐*/
+}
+
+.choosePosition-btn,.choosePicture-btn {
+  position: absolute; /* 绝对定位 */
+  right: 20px; /* 靠屏幕右侧 */
+  float: right;
+  padding: 10px,5px;
+  height: 24px;
+  background-color: #3c8cff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.addTag-btn,.clearTag-btn {
+  margin-left: 5px; /* 添加水平间距 */
+  float: right;
+  padding: 10px,5px;
+  height: 24px;
+  background-color: #3c8cff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.tags {
+  padding:20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-container {
+  display: flex;
+  align-items: center; /* 让子元素垂直居中 */
+  padding: 5px 10px;
+  background-color: #3c8cff;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.tag {
+  font-size: 16px;
+}
+
+.button-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0; /* 调整底部按钮的上下间距 */
+}
+
+.reset-btn {
+  margin-top: 10px;
+  padding:5px,5px;
+  background-color: #ffffff;
+  border: 2px solid #3c8cff;
+  border-radius: 10px;
+  color: #3c8cff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  padding:5px,5px;
+  background-color: #ffffff;
+  border: 2px solid #3c8cff;
+  border-radius: 10px;
+  color: #3c8cff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  align-self: center; /* 垂直居中 */
+}

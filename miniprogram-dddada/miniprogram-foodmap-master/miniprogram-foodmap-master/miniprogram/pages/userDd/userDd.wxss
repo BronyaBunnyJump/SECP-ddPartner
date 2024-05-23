@@ -1,0 +1,70 @@
+.background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #68c8e7, #ffffff, #68c8e7); /* 青-白-青渐变 */
+  position: fixed; /* 固定定位 */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.dynamic-container {
+  display: flex; /* 设置为 flex 布局 */
+  flex-direction: column; /* 子元素竖直排列 */
+  gap: 5px; /* 子元素间距 */
+  align-items: center; /* 子元素竖直居中排列 */
+}
+
+.dynamic-box {
+  position: relative;
+  margin-top: 10px;
+  width: 650rpx; /* 调整盒子宽度 */
+  padding: 20rpx;
+  background-color: rgba(255, 255, 255, 0.637); /* 盒子背景颜色 */
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between; /* 让文字内容和按钮水平排列 */
+  align-items: center; /* 垂直方向上居中 */
+}
+
+.dynamic-text {
+  flex: 1;
+  margin-right: 20rpx; /* 文字内容和按钮之间的间距 */
+}
+
+.dynamic-header {
+  font-size: 16px; /* 标题字体大小 */
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.dynamic-content {
+  font-size: 12px; /* 内容字体大小 */
+  color: #555;
+  margin-bottom: 10rpx;
+}
+
+.dynamic-buttons {
+  display: flex;
+  align-items: center; /* 垂直方向上居中 */
+}
+
+.edit-button,
+.delete-button {
+  padding: 2rpx 16rpx; /* 控制按钮大小 */
+  margin-right: 10rpx; /* 调整按钮之间的间距 */
+  border: none;
+  background-color: #3c8cff;
+  color: #fff;
+  border-radius: 20rpx; /* 控制按钮的圆角 */
+  cursor: pointer;
+  font-size: 12px; /* 按钮字体大小 */
+  min-width: 80rpx; /* 设置按钮的最小宽度 */
+  text-align: center; /* 文字居中 */
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #2a69e9;
+}

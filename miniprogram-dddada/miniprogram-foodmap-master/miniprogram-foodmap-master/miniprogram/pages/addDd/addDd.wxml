@@ -1,0 +1,75 @@
+<view class="container">
+  <!-- 背景 -->
+  <view class="background"></view>
+
+  <view class="form-item">
+    <text>群聊名称：</text>
+    <input type="text" placeholder="为dd群聊起个名字吧" value="{{groupName}}" bindinput="onInputTitle" />
+  </view>
+
+  <view class="form-item">
+    <text>dd标题：</text>
+    <input type="text" placeholder="请输入dd标题" value="{{content}}"bindinput="onInputContent" />
+  </view>
+
+  <view class="form-item">
+    <text>活动时间：</text>
+    <input type="text" placeholder="请描述dd活动时间" value="{{date}}"bindinput="onInputDate" />
+  </view>
+
+  <view class="form-item">
+   <text>活动截止时间(三个月内):</text>
+   <picker mode="date" header-text="选择时间" start="{{deadline}}" end="{{lateDeadline}}" value="{{deadline}}" bindchange="bindDateChange">
+    <view class="font30">
+     <text>{{deadline}}</text>
+    </view>
+   </picker>
+  </view>
+
+  <view class="form-item">
+    <text>性别限制：</text>
+    <picker mode="selector" bindchange="onSelectGender" range="{{genderOptions}}">
+      <view class="picker">
+        {{gender}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="form-item">
+    <text>地点：</text>
+    <input type="text" placeholder="请输入地点" value="{{location}}" bindinput="onInputLocation" />
+  </view>
+
+  <view class="form-item">
+    <text>经纬度：</text>
+    <button class="choosePosition-btn" bindtap="chooseLocation">选择经纬度</button>
+  </view>
+
+  <view class="form-item">
+    <text>标签：</text>
+    <input type="text" placeholder="请选择标签" value="{{ddType}}" maxlength="10" bindinput="onInputTag" />
+    <button class='addTag-btn' bindtap="addTag">添加</button>
+    <button class='clearTag-btn' bindtap="clearTags">清空</button>
+  </view>
+
+  <view class="tags">
+  
+    <block wx:for="{{tags}}" wx:key="index">
+      <view class="tag-container">
+      <text class="tag">{{item}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="form-item">
+    <text>群聊头像:</text>
+    <button class="choosePicture-btn" bindtap="chooseImage">选择图片</button>
+    <image class="avatar" src="{{imageSrc}}"></image>
+  </view>
+
+  <view class="button-container">
+  <button class="reset-btn" bindtap="resetDd">重置公告</button>
+  <button class="submit-btn" bindtap="submitDd">发布公告</button>
+  </view>
+
+</view>

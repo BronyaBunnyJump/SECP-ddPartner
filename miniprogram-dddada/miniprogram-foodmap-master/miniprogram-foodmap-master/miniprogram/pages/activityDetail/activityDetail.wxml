@@ -1,0 +1,28 @@
+<!-- activityDetail.wxml -->
+<view class="container">
+
+ <!-- 背景 -->
+ <view class="background"></view> 
+ 
+  <view class="title">{{activityDetail.title}}</view>
+  <view class="tags">
+    <!-- 循环显示活动标签 -->
+    <block wx:for="{{activityDetail.tags}}" wx:key="index">
+      <view class="tag-container"> 
+        <text class="tag">{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="date">时间: {{activityDetail.date}}</view>
+  <view class="description">性别限制：{{gender}}</view>
+  <view class="description">群聊名称：{{groupName}}</view>
+  <view class="description">具体位置：{{position}}</view>
+
+<!-- 添加按钮 -->
+ <view class="bottom-buttons">
+ <button class="join-button" bindtap="joinActivity">进入群组</button>
+ <!-- 添加以下代码来生成"查看位置"按钮 -->
+ <button class="location-button" bindtap="viewLocation" wx:if="{{showLocationButton}}">查看位置</button>
+ </view>
+
+</view>

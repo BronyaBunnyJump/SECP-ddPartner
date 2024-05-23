@@ -1,0 +1,10 @@
+<view>
+  <!--地图组件-->
+  <map id="map" longitude='{{longitude}}' latitude='{{latitude}}'
+    style='height:{{windowHeight}}px' markers="{{markers}}" subkey="{{mapSubKey}}" show-compass="{{true}}" scale="16"
+    show-location="{{true}}" bindmarkertap="markerTap">
+  </map>
+  <view class="bottom-buttons">
+  <button class="button" bindtap="getCenterLocation">我的位置</button>
+  </view>
+</view>
